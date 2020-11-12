@@ -74,6 +74,7 @@ public class ChooseAddressAdapter extends RecyclerView.Adapter<ChooseAddressAdap
                 intent.putExtra("IsInvalidShippingAddress",addressModels.get(position).getIsInvalidShippingAddress());
                 intent.putExtra("StatId",addressModels.get(position).getStatId());
                 intent.putExtra("Zip",addressModels.get(position).getZip());
+                intent.putExtra("addressColumnId",addressModels.get(position).getShippingAddressId());
                 intent.putExtra("type","updateAddress");
 
                 context.startActivity(intent);

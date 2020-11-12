@@ -34,7 +34,7 @@ public class Api {
     //getShippinngApi
     public static final String GET_CLIENT_SHIPPING_ADDRESS =BASE_URL+"Client/GetShippingAddress?ClientId=";
     //updateAddressApi
-    public static final  String UPDATE_USER_ADDRESS = BASE_URL+"Client/UpdatetShippingAddress";
+    public static final  String UPDATE_USER_ADDRESS = BASE_URL+"Client/UpdateShippingAddress";
 
     //clientDetailsApi
     public static final String GET_USER_DETAILS = BASE_URL+"account/ClientDetails";

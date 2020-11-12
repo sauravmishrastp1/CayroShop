@@ -4,9 +4,13 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class ClientShippingAddress {
+
     @SerializedName("ClientId")
     @Expose
     private Integer clientId;
+    @SerializedName("ShippingAddressId")
+    @Expose
+    private Integer shippingAddressId;
     @SerializedName("AddressTypeId")
     @Expose
     private Integer addressTypeId;
@@ -65,6 +69,14 @@ public class ClientShippingAddress {
 
     public void setClientId(Integer clientId) {
         this.clientId = clientId;
+    }
+
+    public Integer getShippingAddressId() {
+        return shippingAddressId;
+    }
+
+    public void setShippingAddressId(Integer shippingAddressId) {
+        this.shippingAddressId = shippingAddressId;
     }
 
     public Integer getAddressTypeId() {

@@ -59,6 +59,7 @@ public class AddAddressActivity extends AppCompatActivity {
    private ArrayList<GetCityStateData>getCityStateData = new ArrayList<>();
    private int stateId,countryId;
     private ImageView backbtn;
+    private String addressShippingId;
     private List<CityModel> cityModels = new ArrayList<>();
    private String first_name,middle_name="",last_name,country_name,
            city_name,state_name,phone_no,addresLine1,house_no,
@@ -179,6 +180,7 @@ public class AddAddressActivity extends AppCompatActivity {
          UpdatedbyUserId = bundle.getString("UpdatedbyUserId");
          IsActive = bundle.getString("IsActive");
          IsInvalidShippingAddress = bundle.getString("IsInvalidShippingAddress");
+         addressShippingId = bundle.getString("addressColumnId");
 
 
 
@@ -329,6 +331,7 @@ public class AddAddressActivity extends AppCompatActivity {
 
             params.put("ClientId",  SharedPrefManager.getInstance(getApplicationContext()).getUser().getClientid());
             params.put("AddressTypeIid", 1);
+            params.put("ShippingAddressId",addressShippingId);
             params.put("Firstname", firstname);
             params.put("Middlename", midilename);
             params.put("Lastname", lastname);
