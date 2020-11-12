@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddMoneyActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/sample_toolbar"/>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout"
+        android:layout_below="@id/toolbarview"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Add Money"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Cayro Pay Blance"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="You can add utp 10000.00"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <EditText
+            android:id="@+id/add_moneyEt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/indian_rupee"
+            android:background="@drawable/loginbackgrtound"
+            android:padding="10dp"
+            android:elevation="1dp"
+            android:drawablePadding="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Amount"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+
+            android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/add_500rs"
+                android:layout_weight="1"
+                android:text="₹ 500"
+                android:layout_margin="5dp"
+                android:background="@drawable/rectangle_background"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/add_1000rs"
+                android:text="₹ 1000"
+                android:layout_margin="5dp"
+                android:background="@drawable/rectangle_background"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/add_2000rs"
+                android:layout_weight="1"
+                android:text="₹ 2000"
+                android:layout_margin="5dp"
+                android:background="@drawable/rectangle_background"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Continue"
+            android:id="@+id/add_moneybtn"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_background"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#FF9800"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_centerInParent="true"
+    android:id="@+id/progress_bar"
+    android:visibility="gone"
+    android:layout_height="wrap_content">
+
+</ProgressBar>
+</RelativeLayout>

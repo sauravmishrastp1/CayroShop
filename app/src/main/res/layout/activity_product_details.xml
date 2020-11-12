@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductDetailsActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/sample_toolbar"/>
+
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbarview"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewpage"
+
+        android:background="#Ffff"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewpager_indicator"
+        android:layout_below="@id/viewpage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        android:layout_gravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@color/black" />
+       <LinearLayout
+           android:layout_width="match_parent"
+
+           android:layout_below="@id/viewpager_indicator"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+           <include layout="@layout/productdetail_discriptionlayout"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:id="@+id/price_total"
+               android:layout_height="wrap_content"
+               android:text="Related Product"
+               android:layout_marginTop="8dp"
+               android:layout_marginLeft="16dp"
+               android:paddingLeft="5dp"
+               android:textSize="18sp"
+               android:textColor="@color/black"/>
+
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerview"
+               android:layout_marginTop="8dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </androidx.recyclerview.widget.RecyclerView>
+
+
+
+       </LinearLayout>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/total_ruppe"
+                android:text="₹1194"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/total_ruppe"
+                android:text="Total Amount"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/checkout"
+            android:text="Checkout"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_margin="5dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/black"
+            android:background="@drawable/button_rectangle_background"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24">
+
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

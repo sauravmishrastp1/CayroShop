@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F6F5F5"
+    android:layout_height="match_parent"
+    tools:context=".ui.CartActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/carttoolbar"/>
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_below="@id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/layout"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/total_ruppe"
+            android:text="₹--"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/total_ruppe"
+                android:text="Total Amount"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+        </TextView>
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Checkout"
+            android:id="@+id/checkout"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_margin="5dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/black"
+            android:background="@drawable/button_rectangle_background"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24">
+
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/norecordfoundview">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/empty_cart"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+        <Button
+            android:id="@+id/shopnowbtn"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rectangle_background"
+            android:text="Start Shopping"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

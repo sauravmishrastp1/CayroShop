@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/profile_toolbar"/>
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@id/singout_btn"
+        android:layout_below="@id/toolbarview"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout"
+
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/profile_img"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <include layout="@layout/profile_data_layout"/>
+
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="200dp"
+
+            android:visibility="gone"
+            android:src="@drawable/avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="200dp">
+
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/upladte_profile"
+            android:background="@drawable/button_rectangle_background"
+            android:layout_below="@id/profile_img"
+            android:backgroundTint="#77838f"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="9dp"
+                android:text="Change profile"
+                android:drawableTint="#fff"
+                android:textColor="@color/white"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_camera_alt_24"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_baseline_camera_alt_24">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="25dp"
+        android:layout_below="@id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Wallet"
+                android:layout_weight="1"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_account_balance_wallet_24">
+
+            </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="₹0"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp">
+
+                </TextView>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="My order"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="My Whilist"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="My Coupans"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="My Notification"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/transiontion_history"
+                android:text="Transaction History"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/add_wallet"
+                android:text="Add Money"
+                android:padding="9dp"
+                android:drawablePadding="9dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:background="#E6E4E4"
+                android:layout_height="1dp">
+
+            </View>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/singout_btn"
+        android:layout_alignParentBottom="true"
+        android:text="Sing Out!"
+        android:layout_height="wrap_content">
+
+    </Button>
+</RelativeLayout>

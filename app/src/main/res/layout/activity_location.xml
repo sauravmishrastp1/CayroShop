@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="activity.LocationActivity">
+
+    <ImageView
+        android:id="@+id/pinImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:tint="@color/colorPrimary" />
+
+
+    <LinearLayout
+        android:id="@+id/searchbarEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+        <EditText
+            android:id="@+id/citysSarchEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Search Your City.."
+            android:layout_gravity="center_vertical"
+            android:textColorHint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/currentlocationview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_margin="18dp"
+        android:layout_below="@id/searchbarEt"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="Use Current Location"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textFontWeight="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/currentlocation"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cityRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentlocationview">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

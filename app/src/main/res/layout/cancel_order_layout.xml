@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:elevation="3dp"
+    android:layout_marginBottom="4dp"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:id="@+id/filterview"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="4dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/cancle_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            >
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_filter_list_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancle"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="#C6C4C4"/>
+
+        <LinearLayout
+            android:id="@+id/filterviewbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_filter_list_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need Help?"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CheckOutActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/tooar_layout"
+        app:cardCornerRadius="0dp"
+        android:background="@color/white"
+        app:cardElevation="4dp"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            >
+
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/white" />
+
+
+
+            <TextView
+                android:id="@+id/titletv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/backbtn"
+                android:layout_toLeftOf="@id/carticonview"
+                android:layout_marginLeft="16dp"
+                android:textSize="18sp"
+                android:padding="3dp"
+                android:text="Checkout"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/carticonview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/tooar_layout"
+        android:layout_above="@+id/bootomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:elevation="8dp"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/product_img"
+                    android:src="@drawable/sprit"
+                    android:layout_height="100dp">
+
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/layout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/product_img"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Breakfast and Dairy"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Amul Butter"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:text="₹597"
+                            android:layout_height="wrap_content">
+
+
+                        </TextView>
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/addcart_background"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/addcart"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#919090"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="1dp">
+
+                    </View>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Compare"
+                            android:drawableStart="@drawable/ic_baseline_autorenew_24"
+                            android:drawablePadding="9dp"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_autorenew_24">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Whislist"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="14dp"
+                            android:drawableStart="@drawable/whilist"
+                            android:drawablePadding="9dp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/whilist">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/delivery_recyclerview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            android:background="@color/bg_gray"/>
+
+
+        <LinearLayout
+            android:id="@+id/usewalletview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/couponcodeview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/shipping_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include layout="@layout/cart_total_amount_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textColor="@color/black"
+                android:layout_marginLeft="16dp"
+                android:padding="5dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey"/>
+
+
+            <RadioGroup
+                android:id="@+id/pay_rG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/codRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COD" />
+
+                <RadioButton
+                    android:id="@+id/onlineRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAY ONLINE" />
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bootomlayout"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/total_ruppe"
+                android:text="₹1194"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/total_ruppe"
+                android:text="Total Amount"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/placeorder"
+            android:text="Place Order"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_margin="5dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/black"
+            android:background="@drawable/button_rectangle_background"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24">
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

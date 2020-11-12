@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f9f9f9"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+    <include
+        layout="@layout/ly_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   <ScrollView
+       android:layout_below="@id/action_bar"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:layout_height="match_parent">
+     <LinearLayout
+         android:id="@+id/locationlayout"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:contextClickable="true"
+         android:layout_height="wrap_content"
+         android:background="@color/colorPrimary"
+         android:layout_centerVertical="true"
+         android:layout_toLeftOf="@+id/carticon"
+         android:orientation="vertical">
+
+         <RelativeLayout
+             android:id="@+id/changecityView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             >
+
+             <TextView
+                 android:id="@+id/citytv"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Greater Noida"
+                 android:layout_toRightOf="@id/editicon"
+                 android:textColor="@color/white"
+                 android:layout_marginTop="2dp"
+                 android:padding="3dp"
+                 android:singleLine="true"
+                 android:layout_marginLeft="8dp"
+                 android:layout_centerVertical="true"
+                 />
+
+             <ImageView
+                 android:id="@+id/editicon"
+                 android:layout_width="24dp"
+                 android:src="@drawable/ic_baseline_location_on_24"
+                 android:layout_marginStart="10dp"
+                 android:layout_height="24dp"
+                 android:layout_centerVertical="true"
+                 app:tint="@color/white"
+                 android:layout_marginLeft="10dp" />
+
+         </RelativeLayout>
+
+
+     </LinearLayout>
+   <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+       android:layout_marginTop="5dp"
+       android:id="@+id/category_layout"
+    android:layout_height="wrap_content">
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+     <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="150dp"
+         >
+     <androidx.cardview.widget.CardView
+         app:cardCornerRadius="0dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <com.smarteist.autoimageslider.SliderView
+             android:id="@+id/imageSlider"
+             android:layout_width="match_parent"
+             android:layout_height="150dp"
+             app:sliderAnimationDuration="600"
+             app:sliderAutoCycleDirection="back_and_forth"
+             app:sliderAutoCycleEnabled="true"
+             app:sliderCircularHandlerEnabled="true"
+             app:sliderIndicatorAnimationDuration="600"
+             app:sliderIndicatorGravity="center_horizontal|bottom"
+             app:sliderIndicatorOrientation="horizontal"
+             app:sliderIndicatorPadding="3dp"
+             app:sliderIndicatorRadius="2dp"
+             app:sliderIndicatorSelectedColor="#FF5722"
+             app:sliderIndicatorUnselectedColor="#FFF"
+             app:sliderScrollTimeInSec="1"
+             app:sliderStartAutoCycle="true"/>
+
+     </androidx.cardview.widget.CardView>
+     </FrameLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_margin="15dp"
+    android:background="@color/colorPrimary"
+    android:layout_height="100dp">
+    <ImageView
+        android:layout_width="90dp"
+        android:id="@+id/product_img"
+        android:background="@drawable/img1"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="10dp">
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/textview"
+        android:text="Grocery Deals On Best Price"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/product_img"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+    </TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/background_item"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp"
+        android:text="View all product"
+        android:padding="13dp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:textSize="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+    </Button>
+</RelativeLayout>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="Deals and offer you might like"
+         android:layout_margin="15dp"
+         android:textSize="16dp"
+         android:textColor="@color/black"
+         android:layout_height="wrap_content">
+
+     </TextView>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:id="@+id/recyclerview1"
+         android:layout_height="wrap_content">
+
+     </androidx.recyclerview.widget.RecyclerView>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_gravity="end"
+    android:text="View all deals and offers"
+    android:padding="9dp"
+    android:textSize="12dp"
+    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+    android:background="@drawable/button_rectangle_background"
+    android:layout_margin="15dp"
+    android:layout_height="40dp"
+    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+</Button>
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_margin="15dp"
+         android:background="@color/colorPrimary"
+         android:layout_height="100dp">
+         <ImageView
+             android:layout_width="90dp"
+             android:id="@+id/product_img"
+             android:background="@drawable/img4"
+             android:scaleType="fitXY"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="10dp"
+             android:layout_height="90dp"
+             android:layout_marginLeft="10dp">
+         </ImageView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:id="@+id/textview"
+             android:text="Fresh Vegetables Available"
+             android:textColor="@color/white"
+             android:layout_marginTop="10dp"
+             android:layout_marginStart="10dp"
+             android:textSize="18dp"
+             android:textStyle="bold"
+             android:layout_toRightOf="@id/product_img"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp">
+
+         </TextView>
+         <Button
+             android:layout_width="wrap_content"
+             android:background="@drawable/background_item"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:layout_height="40dp"
+             android:text="View all product"
+             android:padding="13dp"
+             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+             android:textSize="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="10dp"
+             android:gravity="center_horizontal"
+             android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+         </Button>
+     </RelativeLayout>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="Deals and offer you might like"
+         android:layout_margin="15dp"
+         android:textSize="16dp"
+         android:textColor="@color/black"
+         android:layout_height="wrap_content">
+
+     </TextView>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:id="@+id/recyclerview2"
+         android:layout_height="wrap_content">
+
+     </androidx.recyclerview.widget.RecyclerView>
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_gravity="end"
+         android:text="View all deals and offers"
+         android:padding="9dp"
+         android:textSize="12dp"
+         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+         android:background="@drawable/button_rectangle_background"
+         android:layout_margin="15dp"
+         android:layout_height="40dp"
+         android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+     </Button>
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_margin="15dp"
+         android:background="@color/colorPrimary"
+         android:layout_height="100dp">
+         <ImageView
+             android:layout_width="90dp"
+             android:id="@+id/product_img"
+             android:background="@drawable/img3"
+             android:scaleType="fitXY"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="10dp"
+             android:layout_height="90dp"
+             android:layout_marginLeft="10dp">
+         </ImageView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:id="@+id/textview"
+             android:text="Personal Care Deals at Cayroshop"
+             android:textColor="@color/white"
+             android:layout_marginTop="10dp"
+             android:layout_marginStart="10dp"
+             android:textSize="18dp"
+             android:textStyle="bold"
+             android:layout_toRightOf="@id/product_img"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp">
+
+         </TextView>
+         <Button
+             android:layout_width="wrap_content"
+             android:background="@drawable/background_item"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:layout_height="40dp"
+             android:text="View all product"
+             android:padding="13dp"
+             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+             android:textSize="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="10dp"
+             android:gravity="center_horizontal"
+             android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+         </Button>
+     </RelativeLayout>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="Deals and offer you might like"
+         android:layout_margin="15dp"
+         android:textSize="16dp"
+         android:textColor="@color/black"
+         android:layout_height="wrap_content">
+
+     </TextView>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:id="@+id/recyclerview3"
+         android:layout_height="wrap_content">
+
+     </androidx.recyclerview.widget.RecyclerView>
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_gravity="end"
+         android:textSize="12dp"
+         android:text="View all deals and offers"
+         android:padding="9dp"
+         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+         android:background="@drawable/button_rectangle_background"
+         android:layout_margin="15dp"
+         android:layout_height="40dp"
+         android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+     </Button>
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_margin="15dp"
+         android:background="@color/colorPrimary"
+         android:layout_height="100dp">
+         <ImageView
+             android:layout_width="90dp"
+             android:id="@+id/product_img"
+             android:background="@drawable/img4"
+             android:scaleType="fitXY"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="10dp"
+             android:layout_height="90dp"
+             android:layout_marginLeft="10dp">
+         </ImageView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:id="@+id/textview"
+             android:text="Breakfast and Dairy at best price"
+             android:textColor="@color/white"
+             android:layout_marginTop="10dp"
+             android:layout_marginStart="10dp"
+             android:textSize="18dp"
+             android:textStyle="bold"
+             android:layout_toRightOf="@id/product_img"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp">
+
+         </TextView>
+         <Button
+             android:layout_width="wrap_content"
+             android:background="@drawable/background_item"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:layout_height="40dp"
+             android:text="View all product"
+             android:padding="13dp"
+             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+             android:textSize="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="10dp"
+             android:gravity="center_horizontal"
+             android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+         </Button>
+     </RelativeLayout>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="Deals and offer you might like"
+         android:layout_margin="15dp"
+         android:textSize="16dp"
+         android:textColor="@color/black"
+         android:layout_height="wrap_content">
+
+     </TextView>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:id="@+id/recyclerview4"
+         android:layout_height="wrap_content">
+
+     </androidx.recyclerview.widget.RecyclerView>
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_gravity="end"
+         android:textSize="12dp"
+         android:text="View all deals and offers"
+         android:padding="9dp"
+         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+         android:background="@drawable/button_rectangle_background"
+         android:layout_margin="15dp"
+         android:layout_height="40dp"
+         android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+     </Button>
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_margin="15dp"
+         android:textSize="16dp"
+         android:text="Bestsellers"
+         android:textColor="@color/black"
+         android:layout_height="wrap_content">
+
+     </TextView>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:id="@+id/product_recy"
+         android:layout_height="wrap_content">
+
+     </androidx.recyclerview.widget.RecyclerView>
+
+     <include
+         layout="@layout/offer_layout"
+         android:layout_width="match_parent"
+         android:layout_marginTop="10dp"
+         android:layout_margin="15dp"
+         android:layout_height="wrap_content" />
+ </LinearLayout>
+
+   </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/helepus_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FF9800"
+        android:background="@drawable/button_rectangle_background"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Help ?"
+            android:textColor="@color/white"
+            android:padding="9dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

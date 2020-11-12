@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.ExploreAllCategoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/sample_toolbar"/>
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/text"
+        android:text="Explore Category"
+        android:layout_below="@id/toolbarview"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_below="@id/text"
+        android:id="@+id/expanded_menu"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+    </ExpandableListView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+</RelativeLayout>

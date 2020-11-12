@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+
+    <RelativeLayout
+        android:id="@+id/toolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/backgrounddrawable"
+        >
+
+        <include layout="@layout/sample_toolbar"/>
+
+
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@id/toolbarview"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:context=".view.activity.OrderDeatils_Activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/order_id"
+            android:layout_marginTop="10dp"
+            android:text="Order Id-12345678"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+
+        <include layout="@layout/orderdeatils_product_layout"/>
+
+        <include layout="@layout/order_status_layout"/>
+        <include
+            android:id="@+id/canorderlayout"
+            layout="@layout/cancel_order_layout" />
+
+        <include layout="@layout/shipping_details_layout" />
+
+        <include layout="@layout/cart_total_amount_layout" />
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F3F1F1"
+        android:layout_height="wrap_content">
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:id="@id/layout"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:layout_width="100dp"
+               android:id="@+id/productimg"
+               android:src="@drawable/dove"
+               android:layout_margin="5dp"
+               android:layout_height="100dp" />
+       </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/layout"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/background_item"
+            android:backgroundTint="#6C6B6B"
+            android:layout_height="35dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="20-20-2020"
+
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_baseline_access_time_24"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24">
+
+            </TextView>
+
+        </LinearLayout>
+           <TextView
+            android:layout_width="wrap_content"
+            android:text="Dove Bath Sope"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <LinearLayout
+            android:id="@+id/ratingview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+
+            <RatingBar
+                android:layout_marginTop="8dp"
+                android:id="@+id/ratingbar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:rating="4"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                android:isIndicator="true"
+                android:progressTint="#FF9800"
+                android:max="5" />
+
+
+            <TextView
+                android:id="@+id/totalreviewstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(100 reviews)"
+                android:textSize="10sp"/>
+
+
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                 android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="₹597"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

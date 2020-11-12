@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/addamount_purpose"
+            android:text="Add Wallet"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/added_momey"
+            android:layout_centerVertical="true"
+            android:text="200"
+            android:textColor="@color/green"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/time"
+            android:text="31/20/210/"
+            android:layout_gravity="end"
+            android:layout_below="@id/added_momey"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/date"
+                android:text="31/20/210/"
+                android:visibility="gone"
+                android:layout_gravity="end"
+                android:layout_below="@id/added_momey"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

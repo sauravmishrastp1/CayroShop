@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#f5f5f5"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/dove"
+            android:id="@+id/productimg"
+            android:layout_height="90dp">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/productimg"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_item"
+                android:backgroundTint="#6C6B6B"
+                android:layout_height="35dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="20-20-2020"
+                    android:padding="8dp"
+                    android:textColor="#fff"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24">
+
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Dove Bath Sope"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:id="@+id/ratingview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <RatingBar
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/ratingbar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:rating="4"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    android:isIndicator="true"
+                    android:progressTint="#FF9800"
+                    android:max="5" />
+
+
+                <TextView
+                    android:id="@+id/totalreviewstv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(100 reviews)"
+                    android:textSize="10sp"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="₹597"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/addcart_background"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/addcart"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#DFDEDE"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/cancle_order"
+            android:text="Cancle order"
+            android:backgroundTint="#de4437"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/track_order"
+            android:text="Order Details"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

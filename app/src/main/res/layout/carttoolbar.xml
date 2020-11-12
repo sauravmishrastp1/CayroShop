@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp"
+    android:background="@color/white"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:id="@+id/myrel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/white" />
+
+
+
+            <ImageView
+                android:id="@+id/sideMenu"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/backbtn"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_dehaze"
+                android:layout_centerVertical="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/applogo"
+                android:layout_toRightOf="@id/sideMenu"
+                android:layout_marginBottom="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@id/carticonview"
+                android:layout_height="46dp">
+
+            </ImageView>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/carticonview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include layout="@layout/search_icon_farame"/>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchbarwithtoolbar"
+            android:layout_below="@id/myrel"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:id="@+id/backSearch"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_baseline_search_24"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="6dp" />
+
+            <TextView
+                android:id="@+id/search_eT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="16dp"
+                android:background="@null"
+                android:hint="Search"
+                android:cursorVisible="false"
+                android:textColorHint="@color/md_grey_850"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:imeOptions="actionSearch"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

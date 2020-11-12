@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.danimahardhika:cafebar:1.3.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c722e7d0b8fc66d60304630f826f9cb2/jetified-cafebar-1.3.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c722e7d0b8fc66d60304630f826f9cb2/jetified-cafebar-1.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c722e7d0b8fc66d60304630f826f9cb2/jetified-cafebar-1.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c722e7d0b8fc66d60304630f826f9cb2/jetified-cafebar-1.3.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
