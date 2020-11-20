@@ -17,7 +17,7 @@
         <activity android:name=".ui.AddMoneyActivity" />
         <activity android:name=".ui.OtpValidate" />
         <activity android:name=".ui.LoginOtp" />
-        <activity android:name=".ui.LoginWithOtp" />
+        <activity android:name=".ui.OfferProduct" />
         <activity android:name=".ui.SearchActivity" />
         <activity android:name=".ui.ExploreAllCategoryActivity" />
         <activity android:name=".ui.HelpActivity" />

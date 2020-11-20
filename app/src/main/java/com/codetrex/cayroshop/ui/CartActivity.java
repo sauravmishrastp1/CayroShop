@@ -71,8 +71,10 @@ public class CartActivity extends AppCompatActivity {
                     startActivity(new Intent(CartActivity.this, LoginActivity.class));
                     finish();
                 }else {
-                    startActivity(new Intent(CartActivity.this, ChooseAddressActivity.class));
-                    finish();
+
+                    Intent intent = new Intent(getApplicationContext(), ChooseAddressActivity.class);
+                    intent.putExtra("product_pice",String.valueOf(totalprice));
+                    startActivity(intent);
                 }
             }
         });

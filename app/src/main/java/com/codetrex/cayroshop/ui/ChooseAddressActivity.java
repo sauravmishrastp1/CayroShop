@@ -5,10 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.icu.util.BuddhistCalendar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -42,6 +44,8 @@ public class ChooseAddressActivity extends AppCompatActivity {
     private ProgressBar progressBar;
      private ArrayList<ClientShippingAddress>getShippingAddresses = new ArrayList<>();
      private View add_address_layout,add_new_address;
+     private Bundle bundle;
+    public static String total_price ="0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,10 @@ public class ChooseAddressActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progreasbar);
         add_new_address = findViewById(R.id.add_new_addres);
         add_address_layout = findViewById(R.id.add_addres);
+        bundle = getIntent().getExtras();
+        if(!bundle.isEmpty()) {
+            total_price = bundle.getString("product_pice");
+        }
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

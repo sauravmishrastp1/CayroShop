@@ -39,6 +39,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -65,6 +66,7 @@ public class AddAddressActivity extends AppCompatActivity {
            city_name,state_name,phone_no,addresLine1,house_no,
            email_address,zip_code,AlternateMobileNumber,
            AddressLocationTypeId,UpdatedbyUserId,IsActive,IsInvalidShippingAddress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,7 +100,11 @@ public class AddAddressActivity extends AppCompatActivity {
 
         // GetCityAdapter getCityAdapter  = new GetCityAdapter(this, (ArrayList<GetCityStateData>) getCityStateData);
 
-        getState();
+        try {
+            getState();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         //get city method
         getCity();
 
@@ -158,6 +164,9 @@ public class AddAddressActivity extends AppCompatActivity {
             }
         });
      bundle  = getIntent().getExtras();
+     try {
+
+
      if(!bundle.isEmpty()) {
          type = bundle.getString("type");
          if (type.equals("updateAddress"))
@@ -194,7 +203,9 @@ public class AddAddressActivity extends AppCompatActivity {
              submitaddres.setText("Submit");
          }
      }
+     }catch (Exception e){
 
+     }
 
     }
 
@@ -396,8 +407,11 @@ public class AddAddressActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
         }
     }
-    private void getState()
-    {
+    private void getState() throws JSONException {
+        JSONObject parm = new JSONObject();
+        parm.put("CountryId",1);
+        parm.put("StateId",1);
+
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, Api.GET_STATE,null, new Response.Listener<JSONObject>() {
         @Override
@@ -442,6 +456,12 @@ public class AddAddressActivity extends AppCompatActivity {
     }
     private void getCity()
     {
+        try {
+
+            JSONObject parm = new JSONObject();
+            parm.put("StateId",1);
+            parm.put("City",1);
+
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         StringRequest request = new StringRequest(Request.Method.POST, Api.GET_CITY, new Response.Listener<String>() {
             @Override
@@ -492,7 +512,9 @@ public class AddAddressActivity extends AppCompatActivity {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
+        }catch (Exception e){
 
+        }
     }
 
 

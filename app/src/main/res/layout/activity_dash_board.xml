@@ -139,6 +139,7 @@
     </TextView>
     <Button
         android:layout_width="wrap_content"
+        android:id="@+id/view_all_product1"
         android:background="@drawable/background_item"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -215,6 +216,7 @@
          </TextView>
          <Button
              android:layout_width="wrap_content"
+             android:id="@+id/viewAllOfferBtn"
              android:background="@drawable/background_item"
              android:layout_alignParentEnd="true"
              android:layout_alignParentBottom="true"

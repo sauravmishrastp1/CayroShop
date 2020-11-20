@@ -78,4 +78,5 @@ public class PaymentOptionAdapter extends RecyclerView.Adapter<PaymentOptionAdap
             paymnetoptionclick = itemView.findViewById(R.id.radio);
         }
     }
+
 }

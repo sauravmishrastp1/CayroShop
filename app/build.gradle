@@ -37,6 +37,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+
+
+        
+
 }
 
 dependencies {
@@ -113,6 +118,14 @@ dependencies {
     //card form
     implementation 'com.github.manojbhadane:PaymentCardView:v1.3'
     implementation 'com.github.travijuu:numberpicker:1.0.7'
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
 
 
 }

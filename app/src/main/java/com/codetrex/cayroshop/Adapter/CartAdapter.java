@@ -170,7 +170,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         cartModel.setProductName(groceryProducts.get(position).getProductName());
         cartModel.setCategoryId(groceryProducts.get(position).getCategoryId());
         cartModel.setProductDetailName(groceryProducts.get(position).getProductDetailName());
-        cartModel.setQuantity(String.valueOf(count));
+        cartModel.setQuantity(String.valueOf(quantity));
         cartModel.setSalePrice(groceryProducts.get(position).getSalePrice());
         cartModel.setRetailPrice(groceryProducts.get(position).getRetailPrice());
         cartModel.setActive(groceryProducts.get(position).getActive());

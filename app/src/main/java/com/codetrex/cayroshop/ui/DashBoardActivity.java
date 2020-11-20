@@ -31,6 +31,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -128,6 +129,7 @@ public class DashBoardActivity extends AppCompatActivity implements GoogleApiCli
     //Broadcast receiver to know the sync status
     private BroadcastReceiver broadcastReceiver;
     private MyDbHelper db;
+    private Button viewAllOfferBtn,view_all_product1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,6 +149,8 @@ public class DashBoardActivity extends AppCompatActivity implements GoogleApiCli
         citytv=findViewById(R.id.citytv);
         recyclerviewcategory_layout = findViewById(R.id.category_layout);
         help_us = findViewById(R.id.helepus_layout);
+        viewAllOfferBtn = findViewById(R.id.viewAllOfferBtn);
+        view_all_product1 = findViewById(R.id.view_all_product1);
 
         MyDbHelper myDbHandler=new MyDbHelper(getApplicationContext(),"cartdb",null,4);
         Temp.setMyDbHandler(myDbHandler);
@@ -161,6 +165,20 @@ public class DashBoardActivity extends AppCompatActivity implements GoogleApiCli
                 startActivity(intent);
             }
         });
+        viewAllOfferBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),OfferProduct.class);
+                startActivity(intent);
+            }
+        });
+        view_all_product1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),OfferProduct.class);
+                startActivity(intent);
+            }
+        });
        search_layout.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -169,7 +187,7 @@ public class DashBoardActivity extends AppCompatActivity implements GoogleApiCli
            }
        });
         db = new MyDbHelper(getApplicationContext(),"cartdb",null,4);
-
+       // Toast.makeText(this, "id="+SharedPrefManager.getInstance(getApplicationContext()).getUser().getClientid(), Toast.LENGTH_SHORT).show();
         ConnectivityManager cm = (ConnectivityManager) getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 

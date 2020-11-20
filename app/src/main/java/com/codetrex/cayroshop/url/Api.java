@@ -52,6 +52,10 @@ public class Api {
 
     //addUserCardDetails
     public static final String ADD_USER_CARD = BASE_URL+"Client/AddClientCardDetails";
+    //order place
+    public static final String ORDER_PLACE = BASE_URL+"Client/PlaceOrder";
+    //client Card
+    public static final String  GET_CLIENT_Card = BASE_URL+"Client/GetClientCardDetails";
 
 
 }

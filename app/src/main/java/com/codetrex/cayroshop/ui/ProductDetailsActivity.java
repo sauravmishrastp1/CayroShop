@@ -6,23 +6,39 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.codetrex.cayroshop.Adapter.ProductImagesAdapter;
 import com.codetrex.cayroshop.R;
 import com.codetrex.cayroshop.dao.CartModel;
 import com.codetrex.cayroshop.database.MyDbHelper;
 import com.codetrex.cayroshop.database.Temp;
 import com.codetrex.cayroshop.model.ProductItemModel;
+import com.codetrex.cayroshop.sharedprefrence.SharedPrefManager;
 import com.codetrex.cayroshop.slidingmenu.SideMenuFragment;
+import com.codetrex.cayroshop.url.Api;
+import com.codetrex.cayroshop.utils.VolleySingleton;
 import com.danimahardhika.cafebar.CafeBar;
 import com.google.android.material.tabs.TabLayout;
+import com.google.gson.JsonObject;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
+import org.json.JSONObject;
+
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +56,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private TextView productbrand_nametxt, product_nametxt, salepricetxt, total_pricetxt, catcounttxt;
     private View search_view,add_to_cart,cart_layout;
     private MyDbHelper myDbHandler ;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +72,26 @@ public class ProductDetailsActivity extends AppCompatActivity {
         product_nametxt = findViewById(R.id.product_name);
         salepricetxt = findViewById(R.id.product_price);
         catcounttxt = findViewById(R.id.count);
+        progressBar = findViewById(R.id.progress_bar);
         cart_layout = findViewById(R.id.fram2);
+        add_to_cart = findViewById(R.id.add_to_cart);
+        checkout = findViewById(R.id.checkout);
+        search_view = findViewById(R.id.wishframe);
 
+        bundle = getIntent().getExtras();
+        if (!bundle.isEmpty()) {
+            product_brandName = bundle.getString("product_brand_name");
+            sale_price = bundle.getString("sale_price");
+            productname = bundle.getString("product_name");
+            p_id = bundle.getString("p_id");
+            p_color_id = bundle.getString("p_color_id");
+            cat_id = bundle.getString("cat_id");
+            productbrand_nametxt.setText(product_brandName);
+            salepricetxt.setText("₹" + sale_price);
+            product_nametxt.setText(productname);
+            total_pricetxt.setText("₹" + sale_price);
+
+        }
         cart_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,9 +99,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        add_to_cart = findViewById(R.id.add_to_cart);
-        checkout = findViewById(R.id.checkout);
-        search_view = findViewById(R.id.wishframe);
+
         myDbHandler= Temp.getMyDbHandler();
          add_to_cart.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -84,7 +117,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+    //            orderPlace();
                 Intent intent = new Intent(getApplicationContext(), ChooseAddressActivity.class);
+                intent.putExtra("product_pice",sale_price);
                 startActivity(intent);
             }
         });
@@ -118,20 +153,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             }
         });
 
-        bundle = getIntent().getExtras();
-        if (!bundle.isEmpty()) {
-            product_brandName = bundle.getString("product_brand_name");
-            sale_price = bundle.getString("sale_price");
-            productname = bundle.getString("product_name");
-            p_id = bundle.getString("p_id");
-            p_color_id = bundle.getString("p_color_id");
-            cat_id = bundle.getString("cat_id");
-            productbrand_nametxt.setText(product_brandName);
-            salepricetxt.setText("₹" + sale_price);
-            product_nametxt.setText(productname);
-            total_pricetxt.setText("₹" + sale_price);
 
-        }
     }
 
     private void getproduct() {
